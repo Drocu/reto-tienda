@@ -10,7 +10,7 @@ const Products = () => {
     let componentMounted = true;
 
 
-    useEffect(() => {
+    useEffect(() => {  
         const getProducts = async () => {
             setLoading(true);
             const response = await fetch("https://fakestoreapi.com/products");
@@ -22,11 +22,12 @@ const Products = () => {
             }
 
             return() => {
-                componentMounted = false;
+               // componentMounted = false;
             }
         }
 
         getProducts();
+         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const Loading = () => {

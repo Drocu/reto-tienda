@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addCart } from "../redux/action";
 import Skeleton from "react-loading-skeleton";
-import { NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Product = () => {
 
@@ -23,6 +23,7 @@ const Product = () => {
             setLoading(false);
         }
         getProduct();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const Loading = () => {
