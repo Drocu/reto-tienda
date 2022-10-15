@@ -5,10 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
 import { BrowserRouter } from 'react-router-dom';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +18,7 @@ root.render(
     <Provider store={store}>
       <App />
     </Provider>
+    <Footer />
   </BrowserRouter>
 );
 
